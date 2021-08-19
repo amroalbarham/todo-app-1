@@ -17,11 +17,9 @@ function SettingContext(props) {
             setItemPerPage(Number(localSettings.itemPerPage));
             setShowCompleted(showCompleted);
         }
-        // console.log('component did mount context: ',localSettings.itemPerPage);
+       
     }, [])
-    useEffect(()=>{
-        // console.log(itemPerPage);
-    },[itemPerPage])
+  
     return (
         <settingContext.Provider value={state}>
             {props.children}
