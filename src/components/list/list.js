@@ -1,10 +1,12 @@
 import React,{useState,useContext,useEffect} from 'react'
 import {settingContext} from '../../context/settingContext.js';
+import { Button} from "@blueprintjs/core";
 function List(props) {
     const settingsContext = useContext(settingContext);
     const [activeList, setActiveList] = useState([]);
     const [activePage, setActivePage] = useState(1);
     const [numOfPages, setNumOfPages] = useState(Math.ceil(props.list.length/settingsContext.itemPerPage));
+
     useEffect(()=>{
         // console.log(settingsContext.itemPerPage);
         let start = (activePage - 1)*settingsContext.itemPerPage;
@@ -42,14 +44,14 @@ function List(props) {
     const pages=()=>{
         let page =[];
         for(let i=1;i<=numOfPages;i++){
-           page.push(<button onClick={()=>{changeActivePage(i)}} key={i}>{i}</button>)
+           page.push(<Button onClick={()=>{changeActivePage(i)}} key={i}>{i}</Button>)
         }
         return page;
     }
 
     return (
         <div>
-            <button onClick={toggleView} >{settingsContext.showCompleted.toString()}</button>
+            <Button onClick={toggleView} >{settingsContext.showCompleted.toString()}</Button>
             {activeList.map(item => (
         <div key={item.id}>
           <p>{item.text}</p>
@@ -59,10 +61,10 @@ function List(props) {
           <hr />
         </div>
       ))}
-     {activePage>1 && <button onClick={()=>{setActivePage(activePage-1)}}>prev</button>}
+     {activePage>1 && <Button onClick={()=>{setActivePage(activePage-1)}}>prev</Button>}
         {pages()}
-      {activePage<numOfPages && <button onClick={()=>{setActivePage(activePage+1)}} >next</button>}
-       {/* <button onClick={()=>{settingsContext.setSettings(null,!settingsContext.view)}}>view</button> */}
+      {activePage<numOfPages && <Button onClick={()=>{setActivePage(activePage+1)}} >next</Button>}
+      {/* <button onClick={()=>{settingsContext.setSettings(null,!settingsContext.view)}}>view</button> */}
 
         </div>
     )

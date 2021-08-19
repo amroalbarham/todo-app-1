@@ -26,7 +26,7 @@ function Form(props) {
                 </label>
 
                 <label>
-                    <Button type="submit">Add Item</Button>
+                    <Button className='bp3-intent-primary' type="submit">Add Item</Button>
                 </label>
             </form>
         </div>
