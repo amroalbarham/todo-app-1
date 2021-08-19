@@ -12,7 +12,7 @@
 
 ## Links 
 
-- [netlify](https://amazing-poitras-ad216f.netlify.app/)
+- [netlify](https://laughing-fermat-789cd5.netlify.app/)
 - [pull request](https://github.com/amroalbarham/todo-app-1/pull/3)
 - [sandbox Link](https://codesandbox.io/s/keen-water-s2isz)
 
