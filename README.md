@@ -12,7 +12,7 @@
 
 ## Links 
 
-- [netlify]()
+- [netlify](https://amazing-poitras-ad216f.netlify.app/)
 - [pull request](https://github.com/amroalbarham/todo-app-1/pull/1)
 - [sandbox Link](https://codesandbox.io/s/icy-field-dnlb1)
 
