@@ -3,8 +3,8 @@ import {settingContext} from '../../context/settingContext';
 
 function SettingsForm() {
     const settings = useContext(settingContext)
+    // console.log("🚀 ~ file: SettingsForm.js ~ line 6 ~ SettingsForm ~ settings", settings)
     const [show,setShow] = useState(true);
-    // console.log("🚀 ~ file: SettingsForm.js ~ line 7 ~ SettingsForm ~ show", show)
     const [numOfitems,setNumOfitems] = useState(1);
     // console.log("🚀 ~ file: SettingsForm.js ~ line 9 ~ SettingsForm ~ numOfitems", numOfitems)
 
