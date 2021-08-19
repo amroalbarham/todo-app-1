@@ -6,6 +6,7 @@ function List(props) {
     const [activePage, setActivePage] = useState(1);
     const [numOfPages, setNumOfPages] = useState(Math.ceil(props.list.length/settingsContext.itemPerPage));
     useEffect(()=>{
+        // console.log(settingsContext.itemPerPage);
         let start = (activePage - 1)*settingsContext.itemPerPage;
         let end = start + settingsContext.itemPerPage;
         setNumOfPages(Math.ceil(props.list.length/settingsContext.itemPerPage)); 
@@ -28,16 +29,16 @@ function List(props) {
             setNumOfPages(Math.ceil(temp.length/settingsContext.itemPerPage))
         }
     },[activePage,settingsContext.showCompleted]);
-//----------------------------------------------//
+
 
     function changeActivePage(num){
         setActivePage(num);
     }
-//----------------------------------------------//
+
     function toggleView(){
         settingsContext.setShowCompleted( !settingsContext.showCompleted );
     }
-//----------------------------------------------//
+
     const pages=()=>{
         let page =[];
         for(let i=1;i<=numOfPages;i++){
@@ -45,7 +46,7 @@ function List(props) {
         }
         return page;
     }
-//----------------------------------------------//
+
     return (
         <div>
             <button onClick={toggleView} >{settingsContext.showCompleted.toString()}</button>
@@ -61,6 +62,7 @@ function List(props) {
      {activePage>1 && <button onClick={()=>{setActivePage(activePage-1)}}>prev</button>}
         {pages()}
       {activePage<numOfPages && <button onClick={()=>{setActivePage(activePage+1)}} >next</button>}
+       {/* <button onClick={()=>{settingsContext.setSettings(null,!settingsContext.view)}}>view</button> */}
 
         </div>
     )
