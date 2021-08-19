@@ -13,7 +13,7 @@
 ## Links 
 
 - [netlify](https://amazing-poitras-ad216f.netlify.app/)
-- [pull request](https://github.com/amroalbarham/todo-app-1/pull/1)
+- [pull request](https://github.com/amroalbarham/todo-app-1/pull/2)
 - [sandbox Link](https://codesandbox.io/s/icy-field-dnlb1)
 
 ### UML
