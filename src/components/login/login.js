@@ -3,7 +3,6 @@ import { AuthContext } from '../../context/authContext';
 import { If, Else, Then } from 'react-if';
 import { Button} from "@blueprintjs/core";
 
-
 const Login = () => {
   const contextType = useContext(AuthContext);
   const [username, setUsername] = useState('');
